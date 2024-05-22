@@ -31,7 +31,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     alt: 'icon',
-    iconPath: '../assets/icons/cancel.svg',
+    iconPath: '/icons/cancel.svg',
     onClick: () => {
       console.log('clicked');
     },

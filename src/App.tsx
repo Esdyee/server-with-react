@@ -1,37 +1,44 @@
-import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
-import './App.css';
+import { useState } from "react";
+import ReactDOM from "react-dom/client";
+import "./App.css";
+import Label from "./components/Label";
+import DefaultTextField from "./components/DefaultTextField";
 
 function App() {
-    const [items, setItems] = useState<string[]>([]);
+    const [isError, setIsError] = useState(false); // 에러 State
 
-    const addItems = () => {
-        const newItems = [];
-        for (let i = 0; i < 20000; i++) {
-            newItems.push(`Item ${i}`);
-        }
-        setItems(newItems);
-    };
+    return (
+        <div>
+            <div className="my-4">
+              <Label htmlFor="email">이메일</Label>
+              <DefaultTextField
+                  id="email"
+                  isError={isError}
+                  iconPath="/icons/email.svg"
+                  iconAlt="email"
+                  placeholder="이메일"
+                  onIconClick={() => console.log('clicked')}
+                  onChange={(e) => console.log(e.target.value)}
+                  value=""
+              />
+            </div>
+            <div className="my-4">
+              <Label htmlFor="password">비밀번호</Label>
+              <DefaultTextField
+                  id="password"
+                  isError={isError}
+                  iconPath="/icons/lock.svg"
+                  iconAlt="lock"
+                  placeholder="비밀번호"
+                  onIconClick={() => console.log('clicked')}
+                  onChange={(e) => console.log(e.target.value)}
+                  value=""
+              />
+            </div>
+            <button onClick={() => setIsError(!isError)}>에러 토글</button>
 
-    const updateItems = () => {
-        setItems((prevItems) => prevItems.map((item) => `Updated ${item}`));
-    };
-
-  return (
-    <div>
-      <div className='alert-box'>test</div>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-      <button onClick={addItems}>Add Items</button>
-      <button onClick={updateItems}>Update Items</button>
-      <div id="container">
-        {items.map((item, index) => (
-          <div key={index} className="item">{item}</div>
-        ))}
-      </div>
-    </div>
-  );
+        </div>
+    );
 }
 
 const rootElement = document.getElementById("root");

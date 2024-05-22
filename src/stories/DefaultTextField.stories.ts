@@ -14,9 +14,13 @@ const meta = {
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
-    alt: { control: 'text', description: 'alt text' },
-    iconPath: { control: 'text', description: 'icon path' },
-    onClick: { action: 'onClick', description: 'onClick' },
+    errorMessage: { control: 'text', description: '에러 메세지' },
+    iconAlt: { control: 'text', description: '아이콘 이미지의 alt 속성' },
+    iconPath: { control: 'text', description: '아이콘 이미지의 경로' },
+    // onIconClick: { action: 'onIconClick', description: 'onIconClick' },
+    placeholder: { control: 'text', description: 'placeholder' },
+    onChange: { action: 'onChange', description: 'onChange 이벤트' },
+    value: { control: 'text', description: 'value 값' },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   // args: { onClick: fn() },
@@ -28,12 +32,17 @@ type Story = StoryObj<typeof meta>;
 // import cancelIcon from '../assets/icons/cancel.svg';
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    alt: 'icon',
-    iconPath: '../assets/icons/cancel.svg',
-    onClick: () => {
-      console.log('clicked');
+    id: 'testid',
+    errorMessage: 'error message',
+    iconAlt: 'delete-icon',
+    iconPath: '/icons/cancel.svg',
+    onIconClick: () => { console.log('icon clicked'); },
+    placeholder: '값을 입력해주세요.',
+    onChange: () => {
+      console.log('changed');
     },
+    value: '',
   },
 };
