@@ -1,9 +1,13 @@
 interface IErrorMessageProps {
-  children: string;
+    children: string;
 }
 
 const ErrorMessage = ({ children }: IErrorMessageProps) => {
-  return <p className="text-red-500">{children}</p>;
+    return (
+        <p className="text-xs text-error">
+            {children}
+        </p>
+    );
 };
 
 export default ErrorMessage;

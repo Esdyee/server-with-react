@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "index.css",
+    "src/components/",
+    "src/styles/",
+    "public/icons"
+  ],
   "scripts": {
     "dev:server": "node --watch server/index.js",
     "dev:ui": "vite",
@@ -14,6 +20,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@fontsource/noto-sans-kr": "^5.0.19",
     "@storybook/cli": "^8.1.1",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",

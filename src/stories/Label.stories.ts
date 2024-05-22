@@ -1,29 +1,28 @@
 import type { Meta, StoryObj } from '@storybook/react';
 // import { fn } from '@storybook/test';
-import ErrorMessage from '../components/ErrorMessage';
+import Label from '../components/Label';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: 'Example/ErrorMessage',
-  component: ErrorMessage,
+  title: 'Example/Label',
+  component: Label,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
   argTypes: {
-    children: { control: 'text', description: 'ErrorMessage의 내용' },
+    htmlFor: { control: 'text', description: 'label의 htmlFor 속성' },
+    children: { control: 'text', description: 'label의 내용' },
   },
   // args: { onClick: fn() },
-} satisfies Meta<typeof ErrorMessage>;
+} satisfies Meta<typeof Label>;
 
 export default meta;
-
-
-
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    htmlFor: 'username',
     children: '이메일',
   },
 };

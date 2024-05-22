@@ -1,6 +1,6 @@
-import { useState } from "react";
-import ReactDOM from "react-dom/client";
-import "./App.css";
+import { useState } from 'react';
+import ReactDOM from 'react-dom/client';
+import './App.css';
 
 function App() {
     const [items, setItems] = useState<string[]>([]);
@@ -17,20 +17,21 @@ function App() {
         setItems((prevItems) => prevItems.map((item) => `Updated ${item}`));
     };
 
-    return (
-        <div>
-            <div className="alert-box">test</div>
-            <button onClick={addItems}>Add Items</button>
-            <button onClick={updateItems}>Update Items</button>
-            <div id="container">
-                {items.map((item, index) => (
-                    <div key={index} className="item">
-                        {item}
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <div className='alert-box'>test</div>
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
+      <button onClick={addItems}>Add Items</button>
+      <button onClick={updateItems}>Update Items</button>
+      <div id="container">
+        {items.map((item, index) => (
+          <div key={index} className="item">{item}</div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 const rootElement = document.getElementById("root");
