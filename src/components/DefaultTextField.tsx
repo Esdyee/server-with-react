@@ -17,7 +17,7 @@ interface DefaultTextFieldProps {
 const DefaultTextField = ({
     id,
     errorMessage,
-    isError, 
+    isError,
     iconPath,
     iconAlt,
     onIconClick,
@@ -55,7 +55,11 @@ const DefaultTextField = ({
                 )}
             </div>
 
-            {isError && <ErrorMessage>{errorMessage || '정의되지 않은 에러 메세지'}</ErrorMessage>}
+            {isError && (
+                <ErrorMessage>
+                    {errorMessage || "정의되지 않은 에러 메세지"}
+                </ErrorMessage>
+            )}
         </div>
     );
 };

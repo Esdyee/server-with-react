@@ -4,7 +4,7 @@ import ErrorMessage from '../components/ErrorMessage';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: 'Example/ErrorMessage',
+  title: 'Example/Label/ErrorMessage',
   component: ErrorMessage,
   parameters: {
     layout: 'centered',

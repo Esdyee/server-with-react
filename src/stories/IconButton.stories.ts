@@ -4,7 +4,7 @@ import IconButton from '../components/IconButton.tsx';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: 'Example/IconButton',
+  title: 'Example/Button/IconButton',
   component: IconButton,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
@@ -17,6 +17,8 @@ const meta = {
     alt: { control: 'text', description: 'alt text' },
     iconPath: { control: 'text', description: 'icon path' },
     onClick: { action: 'onClick', description: 'onClick' },
+    width: { control: 'number', description: 'width' },
+    className: { control: 'text', description: 'className' },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   // args: { onClick: fn() },
@@ -35,5 +37,7 @@ export const Primary: Story = {
     onClick: () => {
       console.log('clicked');
     },
+    width: 14,
+    className: '',
   },
 };

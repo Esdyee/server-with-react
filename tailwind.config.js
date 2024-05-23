@@ -20,6 +20,10 @@ export default {
                 "30px",
                 { lineHeight: "45px", letterSpacing: "0", fontWeight: "400" },
             ],
+            "2xl": [
+                "24px",
+                { lineHeight: "36px", letterSpacing: "0", fontWeight: "700" },
+            ],
         },
         colors: {
             primary: "#1d2745",
