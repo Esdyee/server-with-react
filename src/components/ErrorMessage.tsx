@@ -4,7 +4,7 @@ interface IErrorMessageProps {
 
 const ErrorMessage = ({ children }: IErrorMessageProps) => {
     return (
-        <p className="text-xs text-error">
+        <p className="text-sm text-error" style={{ color: '#c43d3d' }}>
             {children}
         </p>
     );

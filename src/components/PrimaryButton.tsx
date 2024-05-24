@@ -11,7 +11,7 @@ interface PrimaryButtonProps {
 const dark = "bg-primary text-white";
 const light = "bg-white text-black";
 const social = "bg-social text-white";
-const text = "bg-mono200 text-white";
+const text = "bg-mono200 text-black";
 const disabledStyle = "disabled:bg-mono100 disabled:text-black disabled:border-none";
 
 const color: Record<PrimaryButtonTheme, string> = {
