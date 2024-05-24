@@ -3,10 +3,7 @@ name: "Chromatic"
 on: push
 
 jobs:
-name: Storybook Tests
-on: deployment_status
-jobs:
-  accessbility-test:
+    accessibility-test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     if: github.event.deployment_status.state == 'success'
@@ -25,7 +22,7 @@ jobs:
           TARGET_URL: '${{ github.event.deployment_status.target_url }}'
 
   chromatic:
-    needs: accessbility-test
+    needs: accessibility-test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
