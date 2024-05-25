@@ -1,6 +1,6 @@
 {
-  "name": "server-with-react",
-  "private": true,
+  "name": "server-with-react-je",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "files": [
