@@ -6,11 +6,19 @@ interface IconButtonProps {
     className?: string;
 }
 
-const IconButton = ({ alt, iconPath, onClick, width, className }: IconButtonProps) => {
+const IconButton = ({
+    alt,
+    iconPath,
+    onClick,
+    width,
+    className,
+}: IconButtonProps) => {
     return (
         <button
             onClick={onClick}
-            className={"bg-transparent p-2 border-none outline-none" + className}
+            className={
+                "bg-transparent p-2 border-none outline-none" + className
+            }
         >
             <img
                 alt={alt}
