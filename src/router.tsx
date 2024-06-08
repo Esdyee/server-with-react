@@ -9,15 +9,17 @@ const router = createBrowserRouter(
     [
         {
             path: '/',
-            element: <App />
-        },
-        {
-            path: '/useEffectTest',
-            element: <UseEffectTest />
-        },
-        {
-            path: '/loading',
-            element: <LoadingInfo />
+            element: <App />,
+            children: [
+                {
+                    path: '/useEffectTest',
+                    element: <UseEffectTest />
+                },
+                {
+                    path: '/loading',
+                    element: <LoadingInfo />
+                },
+            ]
         },
         {
             path: '*',

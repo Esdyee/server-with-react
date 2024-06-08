@@ -1,27 +1,28 @@
 import ReactDOM from "react-dom/client";
 import "./App.css";
-import TagList from "./components/TagList";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import Home from "./pages/Home";
+
 
 function App() {
+    const location = useLocation();
 
     return (
         <div>
-            {/* <TagList
-                tags={['태그1', '태그2', '태그3']}
-                onTagClick={(tag) => console.log(tag)}
-            /> */}
-            <Outlet />
+            <div style={{ display: 'flex' }}>
+                <div style={{ width: '200px', height: '100vh', background: '#f0f0f0', padding: '20px' }}>
+                    <ul style={{ listStyleType: 'none', padding: 0 }}>
+                        <li><Link to="/">홈</Link></li>
+                        <li><Link to="/useEffectTest">useEffect 테스트</Link></li>
+                        <li><Link to="/loading">로딩 정보</Link></li>
+                    </ul>
+                </div>
+                <div style={{ flex: 1 }}>
+                    {location.pathname === '/' ? <Home /> : <Outlet />}
+                </div>
+            </div>
         </div>
     );
-}
-
-const rootElement = document.getElementById("root");
-if (rootElement) {
-    const root = ReactDOM.createRoot(rootElement);
-    root.render(<App />);
-} else {
-    console.error("Failed to find the root element");
 }
 
 export default App;
