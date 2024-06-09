@@ -16,6 +16,7 @@ function App() {
                         <li><Link to="/useEffectTest">useEffect 테스트</Link></li>
                         <li><Link to="/useMemoTest">useMemo 테스트</Link></li>
                         {/* <li><Link to="/useMemoTest2">useMemo 테스트2</Link></li> */}
+                        <li><Link to="/useCallbackTest">useCallback 테스트</Link></li>
                         <li><Link to="/loading">로딩 정보</Link></li>
                     </ul>
                 </div>

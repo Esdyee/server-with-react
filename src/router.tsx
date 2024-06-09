@@ -5,6 +5,7 @@ import LoadingInfo from './components/LoadingInfo';
 import UseEffectTest from './pages/useEffectTest';
 import UseMemoTest from './pages/useMemoTest';
 import UseMemoTest2 from './pages/useMemoTest2';
+import UseCallbackTest from './pages/useCallbackTest';
 
 
 const router = createBrowserRouter(
@@ -24,6 +25,10 @@ const router = createBrowserRouter(
                 {
                     path: '/useMemoTest2',
                     element: <UseMemoTest2 />
+                },
+                {
+                    path: '/useCallbackTest',
+                    element: <UseCallbackTest />
                 },
                 {
                     path: '/loading',
