@@ -17,7 +17,7 @@ const UseEffectTest = () => {
     return (
         <div className="App">
             <p>count: {count}</p>
-            {console.log("2. render:", count)}
+            {/* {console.log("2. render:", count)} */}
             <button onClick={handleClick}>증가</button>
         </div>
     )

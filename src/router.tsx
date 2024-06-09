@@ -3,6 +3,8 @@ import App from './App';
 import NotFound from './components/NotFound';
 import LoadingInfo from './components/LoadingInfo';
 import UseEffectTest from './pages/useEffectTest';
+import UseMemoTest from './pages/useMemoTest';
+import UseMemoTest2 from './pages/useMemoTest2';
 
 
 const router = createBrowserRouter(
@@ -14,6 +16,14 @@ const router = createBrowserRouter(
                 {
                     path: '/useEffectTest',
                     element: <UseEffectTest />
+                },
+                {
+                    path: '/useMemoTest',
+                    element: <UseMemoTest />
+                },
+                {
+                    path: '/useMemoTest2',
+                    element: <UseMemoTest2 />
                 },
                 {
                     path: '/loading',
