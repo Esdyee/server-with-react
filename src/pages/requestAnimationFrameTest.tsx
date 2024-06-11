@@ -14,14 +14,22 @@ const requestAnimationFrameTest = () => {
         return () => cancelAnimationFrame(id);
     }, []);
 
+    useEffect(() => {
+        if (isConfirm) {
+            alert("확인버튼 눌림");
+        }
+    }, [isConfirm]);
+
     const getHandleClick = () => {
         return async () => {
             const isPopupShown = await getIsConfirm();
-            console.log("isPopupShown", isPopupShown);
+            // console.log("isPopupShown", isPopupShown);
             if (isPopupShown) {
-                return;
+                return; // 사실 여기서 멈춘거고 아래 코드는 실행되지 않음
             }
 
+
+            // 그런데 팝업이 닫히자마자 아래 alert가 출력되는 이유는 useEffect로 인해 리렌더링이 되기 때문에
             alert("클릭 되었습니다.");
         };
     };
@@ -35,6 +43,7 @@ const requestAnimationFrameTest = () => {
             return new Promise((resolve) => {
                 const checkPopupClosed = () => {
                     if (!isPopupOpen) {
+                        console.log("resolve true");
                         resolve(true);
                     } else {
                         requestAnimationFrame(checkPopupClosed);
@@ -43,7 +52,7 @@ const requestAnimationFrameTest = () => {
                 requestAnimationFrame(checkPopupClosed);
             });
         }
-
+        console.log("resolve false");
         return Promise.resolve(false);
     };
 
