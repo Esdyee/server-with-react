@@ -6,6 +6,7 @@ import UseEffectTest from './pages/useEffectTest';
 import UseMemoTest from './pages/useMemoTest';
 import UseMemoTest2 from './pages/useMemoTest2';
 import UseCallbackTest from './pages/useCallbackTest';
+import RequestAnimationFrameTest from './pages/requestAnimationFrameTest';
 
 
 const router = createBrowserRouter(
@@ -29,6 +30,10 @@ const router = createBrowserRouter(
                 {
                     path: '/useCallbackTest',
                     element: <UseCallbackTest />
+                },
+                {
+                    path: '/requestAnimationFrameTest',
+                    element: <RequestAnimationFrameTest />
                 },
                 {
                     path: '/loading',
