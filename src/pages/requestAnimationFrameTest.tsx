@@ -14,11 +14,11 @@ const requestAnimationFrameTest = () => {
         return () => cancelAnimationFrame(id);
     }, []);
 
-    useEffect(() => {
-        if (isConfirm) {
-            alert("확인버튼 눌림");
-        }
-    }, [isConfirm]);
+    // useEffect(() => {
+    //     if (isConfirm) {
+    //         alert("확인버튼 눌림");
+    //     }
+    // }, [isConfirm]);
 
     const getHandleClick = () => {
         return async () => {
@@ -46,9 +46,16 @@ const requestAnimationFrameTest = () => {
                         console.log("resolve true");
                         resolve(true);
                     } else {
+                        console.log("call requestAnimationFram")
+
+                        // useEffect로 isConfirm 확인할 때는
+                        // 쓸데 없는 Logic으로 판명됨.
+                        // 왜냐면 isPopupOpen true일 때 여기로 진입할 수 있는 케이스가 없어보임
                         requestAnimationFrame(checkPopupClosed);
+                        
                     }
                 };
+                console.log("start requestAnimationFrame");
                 requestAnimationFrame(checkPopupClosed);
             });
         }
@@ -58,7 +65,10 @@ const requestAnimationFrameTest = () => {
 
     return (
         <>
-            <pre>isConfirm: {isConfirm.toString()}</pre>
+            <pre>
+                isConfirm: {isConfirm.toString()}<br/>
+                isPopupOpen: {isPopupOpen.toString()}
+            </pre>
             <div>{count}</div>
             <div>
                 <button
