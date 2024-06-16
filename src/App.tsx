@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom/client";
 import "./App.css";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Home from "./pages/Home";

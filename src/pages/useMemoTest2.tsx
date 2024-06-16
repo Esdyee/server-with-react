@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PrimaryButton from "../components/PrimaryButton";
 
-const getValue = (value) => {
+const getValue = (value: any) => {
     for (let i = 0; i < 10000000; i++) {
         value += 1;
     }

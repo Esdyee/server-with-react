@@ -1,4 +1,4 @@
-import { ScrollRestoration } from "react-router-dom";
+// import { ScrollRestoration } from "react-router-dom";
 
 const ScrollRestoreationTest = () => {
   const sectionStyle = "bg-sky-200 shadow-md rounded-lg p-4 mb-4";

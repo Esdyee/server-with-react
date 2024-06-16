@@ -16,7 +16,7 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,  // 'noUnusedLocals'를 false로 설정하여 사용하지 않는 로컬 변수 경고를 비활성화
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },

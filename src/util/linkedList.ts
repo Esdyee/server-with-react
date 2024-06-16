@@ -1,4 +1,4 @@
-class Node {
+class ListNode {
     value: number;
     next: Node | null;
 
@@ -9,8 +9,8 @@ class Node {
 }
 
 class LinkedList {
-    head: Node | null;
-    tail: Node | null;
+    head: ListNode | null;
+    tail: ListNode | null;
     size: number;
 
     constructor() {
