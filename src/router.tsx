@@ -8,6 +8,7 @@ import UseMemoTest2 from './pages/useMemoTest2';
 import UseCallbackTest from './pages/useCallbackTest';
 import RequestAnimationFrameTest from './pages/requestAnimationFrameTest';
 import UseCustomHook from './pages/use-custom-hook-test/useCustomHook';
+import ScrollRestoreationTest from './pages/scroll-restoration/ScrollRestoreationTest';
 
 const router = createBrowserRouter(
     [
@@ -34,6 +35,10 @@ const router = createBrowserRouter(
                 {
                     path: '/useCustomHook',
                     element: <UseCustomHook />
+                },
+                {
+                    path: '/scroll-restoration',
+                    element: <ScrollRestoreationTest />
                 },
                 {
                     path: '/requestAnimationFrameTest',
