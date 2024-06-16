@@ -7,7 +7,7 @@ import UseMemoTest from './pages/useMemoTest';
 import UseMemoTest2 from './pages/useMemoTest2';
 import UseCallbackTest from './pages/useCallbackTest';
 import RequestAnimationFrameTest from './pages/requestAnimationFrameTest';
-
+import UseCustomHook from './pages/use-custom-hook-test/useCustomHook';
 
 const router = createBrowserRouter(
     [
@@ -30,6 +30,10 @@ const router = createBrowserRouter(
                 {
                     path: '/useCallbackTest',
                     element: <UseCallbackTest />
+                },
+                {
+                    path: '/useCustomHook',
+                    element: <UseCustomHook />
                 },
                 {
                     path: '/requestAnimationFrameTest',
