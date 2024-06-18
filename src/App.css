@@ -1,0 +1,16 @@
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+.sidebar ul li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sidebar ul li:hover {
+    background-color: skyblue;
+}
