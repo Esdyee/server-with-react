@@ -8,7 +8,7 @@ const ScrollSubComponent = () => {
         const timer = setTimeout(() => {
             setIsVisible(true);
             console.log('sub component loaded');
-        }, 1000);
+        }, 0);
 
         return () => clearTimeout(timer);
     }, []);
