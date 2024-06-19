@@ -1,9 +1,27 @@
 // import { ScrollRestoration } from "react-router-dom";
 
+import { useEffect } from "react";
+import ScrollRestoration from "./ScrollRestoreation";
+import ScrollSubComponent from "./ScrollSubComponent";
+
 const ScrollRestoreationTest = () => {
   const sectionStyle = "bg-sky-200 shadow-md rounded-lg p-4 mb-4";
   const titleStyle = "text-lg font-bold";
   const paragraphStyle = "text-gray-600";
+
+//   window.location.reload();
+
+  useEffect(() => {
+    if (!window.location.hash) {
+        window.location.href = window.location.href + '#loaded';
+        window.location.reload();
+      }
+  }, []);
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);  
+  }, []);
 
   return (
     <div>
@@ -12,39 +30,49 @@ const ScrollRestoreationTest = () => {
         <div className={sectionStyle}>
             <h2 className={titleStyle}>Section 1</h2>
             <p className={paragraphStyle}>Scroll to the bottom of this section to see the scroll restoration.</p>
+            <img src="https://loremflickr.com/300/200" />
         </div>
         <div className={sectionStyle}>
             <h2 className={titleStyle}>Section 2</h2>
             <p className={paragraphStyle}>Scroll to the bottom of this section to see the scroll restoration.</p>
+            <img src="https://loremflickr.com/300/200" />
         </div>
         <div className={sectionStyle}>
             <h2 className={titleStyle}>Section 3</h2>
             <p className={paragraphStyle}>Scroll to the bottom of this section to see the scroll restoration.</p>
+            <img src="https://loremflickr.com/300/200" />
         </div>
         <div className={sectionStyle}>
             <h2 className={titleStyle}>Section 4</h2>
             <p className={paragraphStyle}>Scroll to the bottom of this section to see the scroll restoration.</p>
+            <img src="https://loremflickr.com/300/200" />
         </div>
         <div className={sectionStyle}>
             <h2 className={titleStyle}>Section 5</h2>
             <p className={paragraphStyle}>Scroll to the bottom of this section to see the scroll restoration.</p>
+            <img src="https://loremflickr.com/300/200" />
         </div>
         <div className={sectionStyle}>
             <h2 className={titleStyle}>Section 5</h2>
             <p className={paragraphStyle}>Scroll to the bottom of this section to see the scroll restoration.</p>
+            <img src="https://loremflickr.com/300/200" />
         </div>
         <div className={sectionStyle}>
             <h2 className={titleStyle}>Section 5</h2>
             <p className={paragraphStyle}>Scroll to the bottom of this section to see the scroll restoration.</p>
+            <img src="https://loremflickr.com/300/200" />
         </div>
         <div className={sectionStyle}>
             <h2 className={titleStyle}>Section 5</h2>
             <p className={paragraphStyle}>Scroll to the bottom of this section to see the scroll restoration.</p>
+            <img src="https://loremflickr.com/300/200" />
         </div>
         <div className={sectionStyle}>
             <h2 className={titleStyle}>Section 5</h2>
             <p className={paragraphStyle}>Scroll to the bottom of this section to see the scroll restoration.</p>
+            <img src="https://loremflickr.com/300/200" />
         </div>
+        <ScrollSubComponent />
         <div className={sectionStyle}>
             <h2 className={titleStyle}>Section 5</h2>
             <p className={paragraphStyle}>Scroll to the bottom of this section to see the scroll restoration.</p>
