@@ -20,6 +20,8 @@ function App() {
                         <li><Link to="/scroll-restoration">scroll restoration 테스트</Link></li>
                         <li><Link to="/useConfirmTest">useConfirm 테스트</Link></li>
                         <li><Link to="/requestAnimationFrameTest">requestAnimationFrame 테스트</Link></li>
+                        <li><Link to="/useReactQueryTest">useReactQueryTest 테스트</Link></li>
+                        <li><Link to="/useMutationTest">useMutationTest 테스트</Link></li>
                         <li><Link to="/loading">로딩 정보</Link></li>
                     </ul>
                 </div>

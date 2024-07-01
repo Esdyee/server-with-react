@@ -10,6 +10,8 @@ import RequestAnimationFrameTest from './pages/requestAnimationFrameTest';
 import UseCustomHook from './pages/use-custom-hook-test/useCustomHook';
 import ScrollRestoreationTest from './pages/scroll-restoration/ScrollRestoreationTest';
 import UseConfirmTest from './pages/useConfirmTest';
+import UseReactQueryTest from './pages/useReactQueryTest';
+import UseMutationTest from './pages/useMutationTest';
 
 const router = createBrowserRouter(
     [
@@ -48,6 +50,14 @@ const router = createBrowserRouter(
                 {
                     path: '/requestAnimationFrameTest',
                     element: <RequestAnimationFrameTest />
+                },
+                {
+                    path: '/useReactQueryTest',
+                    element: <UseReactQueryTest />
+                },
+                {
+                    path: '/useMutationTest',
+                    element: <UseMutationTest />
                 },
                 {
                     path: '/loading',
