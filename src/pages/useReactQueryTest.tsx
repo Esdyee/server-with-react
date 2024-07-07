@@ -19,7 +19,7 @@ const fetchUsers = async (): Promise<User[]> => {
 // UseReactQueryTest 컴포넌트
 const UseReactQueryTest: React.FC = () => {
   // useQuery 훅을 사용하여 서버 상태를 가져옴
-  // 'users'는 쿼리 키, fetchUsers는 데이터를 가져오는 함수
+  // 'users'는 쿼리 키, fetchUsers는 데이터를 가져오는 함수 
   const { data, error, isLoading } = useQuery<User[], Error>('users', fetchUsers);
 
   // isLoading 상태: 데이터가 로딩 중일 때 true
